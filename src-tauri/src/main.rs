@@ -297,7 +297,21 @@ async fn push_multiple(
     Ok(format!("Successfully pushed {} items", completed))
 }
 
+fn fix_path_env() {
+    if let Ok(path) = std::env::var("PATH") {
+        let mut paths = vec![path];
+        paths.push("/opt/homebrew/bin".to_string());
+        paths.push("/usr/local/bin".to_string());
+        if let Ok(home) = std::env::var("HOME") {
+            paths.push(format!("{}/Library/Android/sdk/platform-tools", home));
+        }
+        std::env::set_var("PATH", paths.join(":"));
+    }
+}
+
 fn main() {
+    fix_path_env();
+
     tauri::Builder::default()
         .manage(TransferState {
             cancel_flag: Arc::new(AtomicBool::new(false)),
