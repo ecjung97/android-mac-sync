@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>S25 Mac Sync 📱🔄💻</h1>
-  <p><strong>A lightning-fast, beautiful, and reliable dual-pane file manager to sync files between your Mac and Samsung Galaxy S25 Ultra (or any Android device).</strong></p>
+  <h1>Android Mac Sync 📱🔄💻</h1>
+  <p><strong>A lightning-fast, beautiful, and reliable dual-pane file manager to sync files between your Mac and any Android device.</strong></p>
 </div>
 
 ---
@@ -19,7 +19,7 @@
 ### Option 1: Download Pre-built Release (Recommended)
 1. Go to the [Releases](../../releases) tab on GitHub.
 2. Download the latest `.dmg` file.
-3. Open the `.dmg` and drag **S25 Mac Sync** to your `Applications` folder.
+3. Open the `.dmg` and drag the app to your `Applications` folder.
 
 > [!WARNING]
 > **macOS Unverified Developer Warning**
@@ -31,8 +31,8 @@ If you want to build the app from source yourself, ensure you have [Rust](https:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ecjung97/mac-android-file-transfer.git
-cd mac-android-file-transfer
+git clone https://github.com/ecjung97/android-mac-sync.git
+cd android-mac-sync
 
 # Install dependencies
 npm install
