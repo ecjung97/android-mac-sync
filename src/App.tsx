@@ -256,7 +256,12 @@ function App() {
     <div className="container" onClick={() => setSelectedRemote([])}>
       <header className="header">
         <h1>S25 Transfer Sync</h1>
-        <span className="status">{statusMsg}</span>
+        <div className="header-controls">
+          <button className="universal-refresh-btn" onClick={() => { fetchLocalFiles(); fetchRemoteFiles(); }} title="Refresh Both Panes">
+            ↻ Refresh All
+          </button>
+          <span className="status">{statusMsg}</span>
+        </div>
       </header>
 
       <main className="dual-pane">
